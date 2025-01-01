@@ -2,7 +2,7 @@ import {Link} from "react-router";
 import {motion} from "framer-motion";
 
 const Login = () => {
-    const handleSubmit =(e)=>{
+    const handleSubmit = (e) => {
         e.preventDefault();
     }
     return (<div className='w-full h-[100vh] flex flex-col items-center justify-center'>
