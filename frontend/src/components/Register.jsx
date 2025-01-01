@@ -92,9 +92,6 @@ const Login = () => {
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
         </div>
-        <p className="flex justify-end mt-1 text-slate-500">
-          <Link to="/register">Forget Password ?</Link>
-        </p>
         <motion.button
           whileTap={{
             scale: 0.95,
@@ -103,6 +100,12 @@ const Login = () => {
         >
           Register
         </motion.button>
+        <p className="flex justify-center text-sm mt-4 text-slate-500">
+          Already have an account?
+          <Link to="/" className="text-black">
+            Login
+          </Link>
+        </p>
       </form>
     </div>
   );
