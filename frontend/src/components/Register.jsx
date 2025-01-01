@@ -24,14 +24,19 @@ const Register = () => {
       }, 1500);
     } else {
       axiosInstance
-        .post("/Register", {
+        .post("Register", {
           name: name,
           email: email,
           password: password,
           password_confirmation: confirmPassword,
         })
         .then((data) => console.log(data))
-        .catch((err) => console.log(err));
+        .catch((err) => {
+          setError(err.response.data?.errors?.password[0])
+          setTimeout(()=>{
+            setError(false)
+          },3000)
+        });
     }
   };
 
