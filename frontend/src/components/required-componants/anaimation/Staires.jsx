@@ -1,9 +1,6 @@
 /* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
-import { useLocation } from "react-router";
 export default function Stairs({ children }) {
-  const { pathname } = useLocation();
-  console.log(pathname);
   const variants = {
     initial: {
       top: 0,

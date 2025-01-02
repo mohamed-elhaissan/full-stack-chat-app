@@ -1,13 +1,15 @@
 import { Link } from "react-router";
 import { motion } from "framer-motion";
 import { LiaEyeSolid } from "react-icons/lia";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaRegEyeSlash } from "react-icons/fa";
 import Alert from "./required-componants/Alert.jsx";
 import axiosInstance from "./required-componants/axios-Instance.jsx";
 import Stairs from "./required-componants/anaimation/Staires.jsx";
+import { LoaderCtx } from "../context/LoaderProvider.jsx";
 
 const Register = () => {
+  const [setIsLoading] = useContext(LoaderCtx)
   const [showPassword, setShowPassword] = useState(false);
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -16,6 +18,7 @@ const Register = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
 
   const handleSubmit = (e) => {
+    setIsLoading(true)
     e.preventDefault();
     if (!email || !password || !name || !confirmPassword) {
       setError("fields are required!");
@@ -32,11 +35,13 @@ const Register = () => {
         })
         .then((data) => console.log(data))
         .catch((err) => {
-          setError(err.response.data?.errors?.password[0])
-          setTimeout(()=>{
-            setError(false)
-          },3000)
-        });
+          setError(err);
+          console.log(err);
+
+          console.log("this is ", error);
+        }).finally(()=>{
+          setIsLoading(false)
+        })
     }
   };
 
@@ -47,7 +52,7 @@ const Register = () => {
   return (
     <Stairs>
       <div className="w-full h-[100vh] flex flex-col items-center justify-center">
-        {error && <Alert type={"error"} content={error} />}
+        {/* {error && <Alert type={"error"} content={error} />} */}
         <form
           className=" w-full px-10 sm:w-[80%] md:w-[70%] lg:w-1/3 "
           onSubmit={handleSubmit}
@@ -91,6 +96,9 @@ const Register = () => {
               />
             )}
           </div>
+          <p className="text-red-500 text-sm">
+            {error.response?.data.errors?.password[0]}
+          </p>
           <div className="flex flex-col mt-1 relative">
             <label htmlFor="password">Confirm Password</label>
             <input
@@ -110,7 +118,7 @@ const Register = () => {
           <p className="flex justify-center text-sm mt-4 text-slate-500">
             Already have an account?
             <Link to="/login" className="text-black">
-              Register
+              Login
             </Link>
           </p>
         </form>
