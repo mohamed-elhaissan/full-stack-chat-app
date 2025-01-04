@@ -1,3 +1,4 @@
+
 <h1>Full-Stack Chat Application</h1>
 <p>This is a full-stack chat application built using React for the front end and Laravel for the back end. This README file will guide you through setting up, running, and understanding the project.</p>
 
