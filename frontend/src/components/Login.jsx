@@ -1,12 +1,10 @@
 import { Link } from "react-router";
 import { motion } from "framer-motion";
-import Stairs from "./required-componants/anaimation/Staires";
 const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
   return (
-    <Stairs>
       <div className="w-full h-[100vh] flex flex-col items-center justify-center">
         <form
           className="w-full px-10 sm:w-[80%] md:w-[70%] lg:w-1/3"
@@ -51,7 +49,6 @@ const Login = () => {
           </p>
         </form>
       </div>
-    </Stairs>
   );
 };
 export default Login;

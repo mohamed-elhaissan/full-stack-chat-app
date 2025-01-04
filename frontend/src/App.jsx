@@ -10,8 +10,8 @@ function App() {
   const { isLoading } = useContext(LoaderCtx);
   return (
     <>
+      {isLoading && <Loader />}
       <AnimatePresence mode="wait">
-        {isLoading && <Loader/>}
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
