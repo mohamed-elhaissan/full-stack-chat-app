@@ -5,7 +5,6 @@ import { useState } from "react";
 import { FaRegEyeSlash } from "react-icons/fa";
 import Alert from "./required-componants/Alert.jsx";
 import axiosInstance from "./required-componants/axios-Instance.jsx";
-import Stairs from "./required-componants/anaimation/Staires.jsx";
 
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -45,7 +44,6 @@ const Register = () => {
   };
 
   return (
-    <Stairs>
       <div className="w-full h-[100vh] flex flex-col items-center justify-center">
         {error && <Alert type={"error"} content={error} />}
         <form
@@ -115,7 +113,6 @@ const Register = () => {
           </p>
         </form>
       </div>
-    </Stairs>
   );
 };
 export default Register;
