@@ -7,6 +7,13 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Ignore specific file
+frontend/src/assets/EpicInstaller-17.2.0.msi
+
+# Ignore all .msi files
+*.msi
+
+# Node modules and build output
 node_modules
 dist
 dist-ssr
