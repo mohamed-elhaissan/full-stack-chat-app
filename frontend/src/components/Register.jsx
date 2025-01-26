@@ -36,7 +36,7 @@ const Register = () => {
           password: password,
           password_confirmation: confirmPassword,
         })
-        .then((data) => {
+        .then(() => {
           setIsLoading(false);
           setSuccessAlert("You have successfully registered"),
             setTimeout(() => {
