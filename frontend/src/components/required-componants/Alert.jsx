@@ -22,7 +22,7 @@ const Alert = ({ type, content, onCancel }) => {
       className="fixed flex flex-col gap-1 w-72  right-10 top-10"
     >
       <div
-        className={`p-2 flex items-start rounded gap-2 text-xs font-medium shadow-lg text-white `}
+        className={`p-2 flex items-start rounded gap-2 text-xs font-medium shadow-lg text-white  `}
         style={{
           background: type === "error" ? "#ef4444" : "#22c55e",
         }}

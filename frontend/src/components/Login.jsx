@@ -2,27 +2,51 @@ import { Link } from "react-router";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Alert from "./required-componants/Alert.jsx";
+import axiosInstance from "./required-componants/axios-Instance.jsx";
 const Login = () => {
   //state to mange data
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error,setError] = useState(false)
+  const [notfication, setNotfication] = useState(false);
 
   // functiom to add A user
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (password.length ===0 || email.length === 0) {
-      setError('The Field Are required')
-      setTimeout(()=>{
-        setError(false)
-      },1500)
+    if (password.length === 0 || email.length === 0) {
+      setNotfication({ type: "error", content: "The Field Are required" });
+      setTimeout(() => {
+        setNotfication(false);
+      }, 1500);
+    } else {
+      axiosInstance
+        .post("login", {
+          email: email,
+          password: password,
+        })
+        .then((res) => {
+          setNotfication({ type: "success", content: res.data.message });
+          setTimeout(() => {
+            setNotfication(false);
+          }, 1500);
+        })
+        .catch((err) => {
+          setNotfication({ type: "error", content: err.response?.data.error });
+          setTimeout(() => {
+            setNotfication(false);
+          }, 1500);
+        });
     }
   };
 
   return (
     <div className="w-full h-[100vh] flex flex-col items-center justify-center">
-      {error && <Alert content={error} type={'error'}  onCancel={error}/>}
-      {/* <Alert type='error' content={error.content}/> */}
+      {notfication && (
+        <Alert
+          content={notfication.content}
+          type={notfication.type}
+          onCancel={notfication}
+        />
+      )}
       <form
         className="w-full px-10 sm:w-[80%] md:w-[70%] lg:w-1/3"
         onSubmit={handleSubmit}

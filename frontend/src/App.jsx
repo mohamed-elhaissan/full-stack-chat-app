@@ -5,6 +5,8 @@ import { AnimatePresence } from "framer-motion";
 import { useContext } from "react";
 import Loader from "./components/required-componants/anaimation/Loader.jsx";
 import { LoaderCtx } from "./context/LoaderProvider.jsx";
+import Dashboard from "./components/dashboard/Dashboard.jsx";
+import NotFound from "./components/NotFound.jsx";
 
 function App() {
   const { isLoading } = useContext(LoaderCtx);
@@ -15,6 +17,8 @@ function App() {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/*" element={<NotFound/>}/>
         </Routes>
       </AnimatePresence>
     </>

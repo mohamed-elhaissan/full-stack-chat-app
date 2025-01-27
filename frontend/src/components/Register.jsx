@@ -41,13 +41,11 @@ const Register = () => {
           setIsLoading(false);
           setSuccessAlert("You have successfully registered"),
             setTimeout(() => {
-              navigate("login");
+              navigate("/login");
             }, 1500);
         })
         .catch((err) => {
           setError(err);
-          console.log(err);
-
           setIsLoading(false);
         });
     }
