@@ -12,6 +12,10 @@
 
 body {
   font-family: "Itcavantgardestd Md", sans-serif;
+  .mainDiv {
+    background-image:  radial-gradient(#2d6a4f 0.75px, transparent 0.75px), radial-gradient(#2d6a4f 0.75px, #ffffff 0.75px);
+    background-size: 30px 30px;
+    background-position: 0 0,15px 15px;}
 }
 
 * {
@@ -19,3 +23,35 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
+
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2); 
+  border-radius: 20px; 
+  border: 2px solid transparent; 
+  background-clip: padding-box; 
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.05); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
