@@ -1,7 +1,6 @@
 import { Route, Routes } from "react-router";
 import Login from "./components/Login.jsx";
 import Register from "./components/Register.jsx";
-import { AnimatePresence } from "framer-motion";
 import { useContext } from "react";
 import Loader from "./components/required-componants/anaimation/Loader.jsx";
 import { LoaderCtx } from "./context/LoaderProvider.jsx";
@@ -14,7 +13,6 @@ function App() {
   return (
     <>
       {isLoading && <Loader />}
-      <AnimatePresence mode="wait">
         <Routes>
           <Route path="/" element={<TalkZone />} />
           <Route path="/login" element={<Login />} />
@@ -22,7 +20,6 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/*" element={<NotFound/>}/>
         </Routes>
-      </AnimatePresence>
     </>
   );
 }

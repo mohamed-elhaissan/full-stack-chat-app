@@ -1,99 +1,102 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { IoIosMenu } from "react-icons/io";
 import { LuExternalLink } from "react-icons/lu";
 import { IoCloseOutline } from "react-icons/io5";
 import { Link } from "react-router";
 import phone1 from "../../public/phone-1.svg";
 import phone2 from "../../public/phone-2.svg";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion, useInView } from "framer-motion";
 import message1 from "../../public/Bubble - Person.svg";
 import message2 from "../../public/Bubble - Friend.svg";
+const variants = {
+  start: {
+    y: -10,
+    opacity: 0,
+  },
+  end: {
+    y: 0,
+    opacity: 1,
+  },
+};
 const TalkZone = () => {
-  const variants = {
-    start: {
-      y: -10,
-      opacity: 0,
-    },
-    end: {
-      y: 0,
-      opacity: 1,
-    },
-  };
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
       <header className="fixed left-0 right-0 top-0 m-6 flex justify-between items-center  ">
-        <h1 className="text-3xl font-bold text-sky-500">Talkzone</h1>
+        <h1 className="text-3xl font-bold text-sky-500 ">Talkzone</h1>
         <IoIosMenu
           onClick={() => setIsOpen(!isOpen)}
           className="text-4xl hover:bg-black rounded-full w-10 h-10 hover:text-white p-1 cursor-pointer "
         />
 
-        {isOpen && (
-          <motion.div
-            variants={variants}
-            initial="start"
-            animate="end"
-            className="absolute w-[20%] p-1 bg-white shadow-custom-shadow right-0 top-10"
-          >
+        <AnimatePresence>
+          {isOpen && (
             <motion.div
               variants={variants}
               initial="start"
               animate="end"
-              transition={{
-                delay: 0.1,
-              }}
-              className="flex items-center justify-end border-b py-2"
+              exit="start"
+              className="absolute w-[20%] p-1 bg-white shadow-custom-shadow right-0 top-10"
             >
-              <IoCloseOutline
-                onClick={() => setIsOpen(false)}
-                className="hover:bg-red-500 rounded-full hover:text-white cursor-pointer"
-              />
-            </motion.div>
-            <motion.div
-              variants={variants}
-              initial="start"
-              animate="end"
-              transition={{
-                delay: 0.2,
-              }}
-            >
-              <Link
-                to={"/login"}
-                className="hover:bg-black text-sm hover:text-white  rounded-lg flex justify-between items-center py-2 px-1 border-b"
+              <motion.div
+                variants={variants}
+                initial="start"
+                animate="end"
+                transition={{
+                  delay: 0.1,
+                }}
+                className="flex items-center justify-end border-b py-2"
               >
-                Log in <LuExternalLink />
-              </Link>
-            </motion.div>
+                <IoCloseOutline
+                  onClick={() => setIsOpen(false)}
+                  className="hover:bg-red-500 rounded-full hover:text-white cursor-pointer"
+                />
+              </motion.div>
+              <motion.div
+                variants={variants}
+                initial="start"
+                animate="end"
+                transition={{
+                  delay: 0.2,
+                }}
+              >
+                <Link
+                  to={"/login"}
+                  className="hover:bg-black text-sm hover:text-white  rounded-lg flex justify-between items-center py-2 px-1 border-b"
+                >
+                  Log in <LuExternalLink />
+                </Link>
+              </motion.div>
 
-            <motion.div
-              variants={variants}
-              initial="start"
-              animate="end"
-              transition={{
-                delay: 0.3,
-              }}
-            >
-              <Link
-                to={"/register"}
-                className="hover:bg-black text-sm  hover:text-white  rounded-lg flex justify-between items-center py-2 px-1 border-b"
+              <motion.div
+                variants={variants}
+                initial="start"
+                animate="end"
+                transition={{
+                  delay: 0.3,
+                }}
               >
-                Sign up <LuExternalLink />
-              </Link>
+                <Link
+                  to={"/register"}
+                  className="hover:bg-black text-sm  hover:text-white  rounded-lg flex justify-between items-center py-2 px-1 border-b"
+                >
+                  Sign up <LuExternalLink />
+                </Link>
+              </motion.div>
+              <motion.div
+                variants={variants}
+                initial="start"
+                animate="end"
+                transition={{
+                  delay: 0.4,
+                }}
+                className="hover:bg-black text-sm cursor-pointer hover:text-white rounded-lg flex justify-between items-center py-2 px-1"
+              >
+                Dark Mode
+              </motion.div>
             </motion.div>
-            <motion.div
-              variants={variants}
-              initial="start"
-              animate="end"
-              transition={{
-                delay: 0.4,
-              }}
-              className="hover:bg-black text-sm hover:text-white rounded-lg flex justify-between items-center py-2 px-1"
-            >
-              Dark Mode
-            </motion.div>
-          </motion.div>
-        )}
+          )}
+        </AnimatePresence>
       </header>
 
       <Hero />
@@ -111,7 +114,7 @@ export default TalkZone;
 const Hero = () => {
   return (
     <section className="h-screen overflow-hidden">
-      <div className="mainDiv my-16 mx-3 h-[90%]">
+      <div className="mainDiv my-16 mx-3 h-[100%]">
         <div className="flex items-center justify-center h-full">
           <motion.img
             initial={{
@@ -190,19 +193,22 @@ const Hero = () => {
 };
 
 const Animated2ndSection = () => {
+  const mainSection = useRef();
+  const isOnView = useInView(mainSection);
+  useEffect(() => {
+    if (isOnView) {
+      console.log("im in view ");
+    } else {
+      console.log("im not in view");
+    }
+  }, [isOnView]);
   return (
-    <section className="h-screen overflow-hidden ">
+    <section className="h-screen overflow-hidden " ref={mainSection}>
       <div className="flex h-full justify-center items-center relative">
-        <motion.h2
-          initial={{ scale: 1 }}
-          whileInView={{ scale: 0.1 }}
-          className="text-9xl"
-        >
-          Unify Your Talk Zone
-        </motion.h2>
+        <motion.h2 className="text-9xl">Unify Your Talk Zone</motion.h2>
         <img className="absolute  left-0 bottom-0" src={message1} alt="" />
         <img
-          className="absolute  left-0 top-0"
+          className="absolute   left-0 top-0"
           src="https://www.jeton.com/_ipx/q_90&w_425/cms/633e0fd8c443a6124a232d42ad11c20cc078d65c-600x500.png"
           alt=""
         />
