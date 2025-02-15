@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Alert from "./required-componants/Alert.jsx";
@@ -8,6 +8,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [notfication, setNotfication] = useState(false);
+  const navigate = useNavigate();
 
   // functiom to add A user
   const handleSubmit = (e) => {
@@ -24,8 +25,15 @@ const Login = () => {
           password: password,
         })
         .then((res) => {
+          console.log(res.data.user);
+
+          window.localStorage.setItem("token", res.data.token);
+          window.localStorage.setItem("userName", res.data.user.name);
+          window.localStorage.setItem("userEmail", res.data.user.email);
+
           setNotfication({ type: "success", content: res.data.message });
           setTimeout(() => {
+            navigate("/dashboard");
             setNotfication(false);
           }, 1500);
         })

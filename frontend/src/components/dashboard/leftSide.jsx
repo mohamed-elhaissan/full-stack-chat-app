@@ -1,23 +1,14 @@
-import { IoChatbubbleOutline } from "react-icons/io5";
-import { CiSearch } from "react-icons/ci";
-
+import useravatar from "../../assets/../../public/useravatar.svg";
 const LeftSide = () => {
   return (
-    <div className="w-[20%]  p-4 shadow-lg rounded-lg">
-      <div className="border-b border-gray-200 pb-4">
-        <h1 className="flex items-center gap-2 font-bold text-2xl tracking-tighter">
-          <IoChatbubbleOutline />
-          My Chat
-        </h1>
-
-        <div className="mt-4  rounded-lg border border-gray-200 p-2 flex items-center gap-2">
-          <CiSearch className="text-gray-500 text-xl" />
-          <input
-            type="text"
-            className="border-none outline-none text-gray-500 w-full h-full bg-transparent"
-            placeholder="Search"
-          />
+    <div className="w-[20%]  p-4 shadow-lg rounded-lg ">
+      <div className="flex items-center gap-2">
+        <img src={useravatar} className="w-10 h-10 rounded-full" alt="" />
+        <div>
+          <h2 className="text-lg font-bold">{window.localStorage.getItem("userName")}</h2>
+          <p className="text-sm">{window.localStorage.getItem("userEmail")}</p>
         </div>
+        
       </div>
     </div>
   );
