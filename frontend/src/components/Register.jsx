@@ -1,5 +1,6 @@
 import { Link, useNavigate } from "react-router";
-import { motion } from "framer-motion";
+
+import { color, motion } from "framer-motion";
 import { LiaEyeSolid } from "react-icons/lia";
 import { useContext, useState } from "react";
 import { FaRegEyeSlash } from "react-icons/fa";
@@ -15,6 +16,8 @@ const Register = () => {
   const [error, setError] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [emailError, setEmailError] = useState(false);
+  const [passwordError, setPasswordError] = useState(false);
   const [confirmPassword, setConfirmPassword] = useState("");
   const [allfieldareRequired, setAllfieldAreRequired] = useState(false);
   const [succesAlert, setSuccessAlert] = useState(false);
@@ -45,7 +48,9 @@ const Register = () => {
             }, 1500);
         })
         .catch((err) => {
-          setError(err);
+          setEmailError(err.response?.data.errors.email[0] && false);
+          setPasswordError(err.response?.data.errors.password[0] && false);
+
           setIsLoading(false);
         });
     }
@@ -234,3 +239,8 @@ const Register = () => {
   );
 };
 export default Register;
+
+
+
+
+
