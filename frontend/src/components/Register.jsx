@@ -1,9 +1,9 @@
 import { Link, useNavigate } from "react-router";
 
-import { color, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { LiaEyeSolid } from "react-icons/lia";
 import { useContext, useState } from "react";
-import { FaRegEyeSlash } from "react-icons/fa";
+import {  FaRegEyeSlash } from "react-icons/fa";
 import Alert from "./required-componants/Alert.jsx";
 import axiosInstance from "./required-componants/axios-Instance.jsx";
 
@@ -16,8 +16,6 @@ const Register = () => {
   const [error, setError] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [emailError, setEmailError] = useState(false);
-  const [passwordError, setPasswordError] = useState(false);
   const [confirmPassword, setConfirmPassword] = useState("");
   const [allfieldareRequired, setAllfieldAreRequired] = useState(false);
   const [succesAlert, setSuccessAlert] = useState(false);
@@ -48,9 +46,26 @@ const Register = () => {
             }, 1500);
         })
         .catch((err) => {
-          setEmailError(err.response?.data.errors.email[0] && false);
-          setPasswordError(err.response?.data.errors.password[0] && false);
+          const destructuredArray = Object.values(
+            err.response?.data.errors
+          ).flat();
+          setError(destructuredArray);
+          console.log('this is new Array ! ');
+          console.log(error);
+          
+          
+          // setError(err);
+          // console.log(err.response?.data.errors?.password?.[0]);
 
+          // console.log(typeof err.response.data.errors);
+          // // err.response.data.errors.map((item) => {
+          // //   console.log(item);
+          // // });
+          // Object.values(err.response.data)
+          //   .flat()
+          //   .map((item) => console.log(item));
+        })
+        .finally(() => {
           setIsLoading(false);
         });
     }
@@ -66,17 +81,26 @@ const Register = () => {
   return (
     <div>
       <div className="w-full h-[100vh] flex flex-col items-center justify-center">
-        {allfieldareRequired && (
-          <Alert type={"error"} content={allfieldareRequired} />
+        {error && (
+          <div className="flex flex-col gap-1">
+            {error.map((item, index) => (
+              <div key={index}>
+                <Alert type={"error"} content={item} />
+                
+              </div>
+            ))}
+          </div>
         )}
+        {/* {allfieldareRequired && (
+        )} */}
         {succesAlert && <Alert type={"success"} content={succesAlert} />}
         <form
-          className=" w-full px-10 sm:w-[80%] md:w-[70%] lg:w-1/3 "
+          className="bg-white rounded-lg p-8 shadow-lg w-full px-10 sm:w-[80%] md:w-[70%] lg:w-1/3 "
           onSubmit={handleSubmit}
         >
           <h1 className="text-3xl text-center font-semibold">Welcome Sir !</h1>
           <p className="text-sm text-slate-500 text-center  mb-5">
-            Please The required details
+            Enter The required details
           </p>
           <div className="flex flex-col">
             <label htmlFor="name">Name</label>
@@ -239,8 +263,3 @@ const Register = () => {
   );
 };
 export default Register;
-
-
-
-
-

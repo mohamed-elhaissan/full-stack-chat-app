@@ -17,11 +17,11 @@
 			"com.tldraw.asset.image": 5,
 			"com.tldraw.asset.video": 5,
 			"com.tldraw.shape.group": 0,
-			"com.tldraw.shape.text": 2,
+			"com.tldraw.shape.text": 3,
 			"com.tldraw.shape.bookmark": 2,
 			"com.tldraw.shape.draw": 2,
-			"com.tldraw.shape.geo": 9,
-			"com.tldraw.shape.note": 8,
+			"com.tldraw.shape.geo": 10,
+			"com.tldraw.shape.note": 9,
 			"com.tldraw.shape.line": 5,
 			"com.tldraw.shape.frame": 0,
 			"com.tldraw.shape.arrow": 5,
@@ -34,97 +34,104 @@
 	},
 	"records": [
 		{
-			"gridSize": 10,
-			"name": "",
-			"meta": {},
-			"id": "document:document",
-			"typeName": "document"
-		},
-		{
-			"meta": {},
-			"id": "page:page",
-			"name": "Page 1",
-			"index": "a1",
-			"typeName": "page"
-		},
-		{
 			"id": "pointer:pointer",
 			"typeName": "pointer",
-			"x": 1574.038299547794,
-			"y": 1142.4074619663807,
-			"lastActivityTimestamp": 1739639470676,
+			"x": 241.1151690169936,
+			"y": 654.9589324249837,
+			"lastActivityTimestamp": 1742992296382,
 			"meta": {}
 		},
 		{
-			"followingUserId": null,
-			"opacityForNextShape": 1,
-			"stylesForNextShape": {
-				"tldraw:geo": "rectangle",
-				"tldraw:size": "s"
-			},
-			"brush": null,
-			"scribbles": [],
-			"cursor": {
-				"type": "default",
-				"rotation": 0
-			},
-			"isFocusMode": false,
-			"exportBackground": true,
-			"isDebugMode": false,
-			"isToolLocked": false,
-			"screenBounds": {
-				"x": 0,
-				"y": 0,
-				"w": 1280,
-				"h": 749.6000366210938
-			},
-			"insets": [
-				false,
-				false,
-				true,
-				false
-			],
-			"zoomBrush": null,
-			"isGridMode": false,
-			"isPenMode": false,
-			"chatMessage": "",
-			"isChatting": false,
-			"highlightedUserIds": [],
-			"isFocused": true,
-			"devicePixelRatio": 1.25,
-			"isCoarsePointer": false,
-			"isHoveringCanvas": true,
-			"openMenus": [],
-			"isChangingStyle": false,
-			"isReadonly": false,
+			"x": 454.2400659835897,
+			"y": -466.2962384975225,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
 			"meta": {},
-			"duplicateProps": null,
-			"id": "instance:instance",
-			"currentPageId": "page:page",
-			"typeName": "instance"
+			"id": "shape:SQHYTu1yonwQ5-tsTo9gL",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "s",
+				"w": 158.9499969482422,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "message_status "
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "aE8PP",
+			"typeName": "shape"
 		},
 		{
-			"editingShapeId": "shape:m8MT0V2UkG8tmFuDWMM0U",
-			"croppingShapeId": null,
-			"selectedShapeIds": [
-				"shape:m8MT0V2UkG8tmFuDWMM0U"
-			],
-			"hoveredShapeId": "shape:m8MT0V2UkG8tmFuDWMM0U",
-			"erasingShapeIds": [],
-			"hintingShapeIds": [],
-			"focusedGroupId": null,
+			"x": -165.03484118758502,
+			"y": 724.2387448625782,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
 			"meta": {},
-			"id": "instance_page_state:page:page",
-			"pageId": "page:page",
-			"typeName": "instance_page_state"
+			"id": "shape:BhzIqlASJd-IlqJKtdBRZ",
+			"type": "note",
+			"props": {
+				"color": "black",
+				"size": "s",
+				"font": "draw",
+				"align": "middle",
+				"verticalAlign": "middle",
+				"labelColor": "black",
+				"growY": 0,
+				"fontSizeAdjustment": 18,
+				"url": "",
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "This table stores user information for authentication and profile purposes."
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "aG6MI",
+			"typeName": "shape"
 		},
 		{
-			"x": -1162.0251220942146,
-			"y": -273.6257137972296,
-			"z": 0.6077475742471501,
 			"meta": {},
-			"id": "camera:page:page",
-			"typeName": "camera"
+			"id": "binding:TjNfyoJ2DTFgtF7ofUIuZ",
+			"type": "arrow",
+			"fromId": "shape:pvAFPKC91NLOE7HSlCtmk",
+			"toId": "shape:yrVgaN0O_xWZB7O4baXyu",
+			"props": {
+				"isPrecise": false,
+				"isExact": false,
+				"normalizedAnchor": {
+					"x": 0.9952237764907013,
+					"y": 0.9979381712709815
+				},
+				"terminal": "start"
+			},
+			"typeName": "binding"
 		},
 		{
 			"x": 214.40000915527344,
@@ -145,531 +152,113 @@
 				"dash": "draw",
 				"size": "m",
 				"font": "draw",
-				"text": "",
 				"align": "middle",
 				"verticalAlign": "middle",
 				"growY": 0,
 				"url": "",
-				"scale": 1
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph"
+						}
+					]
+				}
 			},
 			"parentId": "page:page",
 			"index": "a1",
 			"typeName": "shape"
 		},
 		{
-			"x": 300.00006103515625,
-			"y": 187.0000114440918,
-			"rotation": 0,
-			"isLocked": false,
-			"opacity": 1,
+			"x": 1244.1562035227275,
+			"y": 618.4920820358841,
+			"z": 0.4205108267879112,
 			"meta": {},
-			"id": "shape:NXyGnx8L5zIxrG9_txwuR",
-			"type": "text",
-			"props": {
-				"color": "black",
-				"size": "m",
-				"w": 66.88750457763672,
-				"text": "users",
-				"font": "draw",
-				"textAlign": "start",
-				"autoSize": true,
-				"scale": 1
-			},
-			"parentId": "page:page",
-			"index": "a2BgP",
-			"typeName": "shape"
+			"id": "camera:page:page",
+			"typeName": "camera"
 		},
 		{
-			"x": 248.79995727539062,
-			"y": 248.5999870300293,
-			"rotation": 0,
-			"isLocked": false,
-			"opacity": 1,
 			"meta": {},
-			"id": "shape:iEo78_C3M2bEonx89CVdg",
-			"type": "text",
-			"props": {
-				"color": "black",
-				"size": "m",
-				"w": 151.53750610351562,
-				"text": "id,\nname,\nemail \n,password,\navatar_url ,\ncreated_at \nupdated_at",
-				"font": "draw",
-				"textAlign": "start",
-				"autoSize": true,
-				"scale": 1
-			},
-			"parentId": "page:page",
-			"index": "a3Adz",
-			"typeName": "shape"
-		},
-		{
-			"x": 807.5866065790067,
-			"y": -252.628633044834,
-			"rotation": 0,
-			"isLocked": false,
-			"opacity": 1,
-			"meta": {},
-			"id": "shape:BbzVrzx4HcINDMdWs3ihC",
-			"type": "geo",
-			"props": {
-				"w": 299.01025285527703,
-				"h": 167.1108004867567,
-				"geo": "rectangle",
-				"color": "black",
-				"labelColor": "black",
-				"fill": "none",
-				"dash": "draw",
-				"size": "m",
-				"font": "draw",
-				"text": "",
-				"align": "middle",
-				"verticalAlign": "middle",
-				"growY": 0,
-				"url": "",
-				"scale": 1
-			},
-			"parentId": "page:page",
-			"index": "a42Ew",
-			"typeName": "shape"
-		},
-		{
-			"x": 874.8359531099285,
-			"y": -285.3029790691155,
-			"rotation": 0,
-			"isLocked": false,
-			"opacity": 1,
-			"meta": {},
-			"id": "shape:c_vSXjk0qWchygs82bqd9",
-			"type": "text",
-			"props": {
-				"color": "black",
-				"size": "m",
-				"w": 171.0749969482422,
-				"text": "conversations",
-				"font": "draw",
-				"textAlign": "start",
-				"autoSize": true,
-				"scale": 1
-			},
-			"parentId": "page:page",
-			"index": "a5AAJ",
-			"typeName": "shape"
-		},
-		{
-			"x": 822.4446508496569,
-			"y": -236.47484026106736,
-			"rotation": 0,
-			"isLocked": false,
-			"opacity": 1,
-			"meta": {},
-			"id": "shape:GEiC_ahF7O9z7iXxwnwFr",
-			"type": "text",
-			"props": {
-				"color": "black",
-				"size": "s",
-				"w": 193.9875030517578,
-				"text": "id \nconversation_name ,\nis_group \ncreated_at \nupdated_at AMP",
-				"font": "draw",
-				"textAlign": "start",
-				"autoSize": true,
-				"scale": 1
-			},
-			"parentId": "page:page",
-			"index": "a68qy",
-			"typeName": "shape"
-		},
-		{
-			"x": 1080.0730422796728,
-			"y": 31.00290375430791,
-			"rotation": 0,
-			"isLocked": false,
-			"opacity": 1,
-			"meta": {},
-			"id": "shape:RumfrKJeFJFlFQPU5GIpT",
-			"type": "geo",
-			"props": {
-				"w": 420.7885533158724,
-				"h": 283.00041007116516,
-				"geo": "rectangle",
-				"color": "black",
-				"labelColor": "black",
-				"fill": "none",
-				"dash": "draw",
-				"size": "s",
-				"font": "draw",
-				"text": "",
-				"align": "middle",
-				"verticalAlign": "middle",
-				"growY": 0,
-				"url": "",
-				"scale": 1
-			},
-			"parentId": "page:page",
-			"index": "a73KJ",
-			"typeName": "shape"
-		},
-		{
-			"x": 1199.2121836511496,
-			"y": 4.938438308809964,
-			"rotation": 0,
-			"isLocked": false,
-			"opacity": 1,
-			"meta": {},
-			"id": "shape:3x2wfy1WoM5Mi2L2vzloV",
-			"type": "text",
-			"props": {
-				"color": "black",
-				"size": "s",
-				"w": 181.0625,
-				"text": "conversation_users",
-				"font": "draw",
-				"textAlign": "start",
-				"autoSize": true,
-				"scale": 1
-			},
-			"parentId": "page:page",
-			"index": "a88rA",
-			"typeName": "shape"
-		},
-		{
-			"x": 1092.1780206383098,
-			"y": 54.550563340092594,
-			"rotation": 0,
-			"isLocked": false,
-			"opacity": 1,
-			"meta": {},
-			"id": "shape:OgU6BsYAHbNSu53lfEuuK",
-			"type": "text",
-			"props": {
-				"color": "black",
-				"size": "s",
-				"w": 393.4375,
-				"text": "id \nconversation_id\nuser_id \njoined_at \nFOREIGN KEY (conversation_id) \nREFERENCES conversations(id) ON DELETE\n CASCADE,\nFOREIGN KEY (user_id)\n REFERENCES users(id) ON DELETE\n CASCADE",
-				"font": "draw",
-				"textAlign": "start",
-				"autoSize": true,
-				"scale": 1
-			},
-			"parentId": "page:page",
-			"index": "a98Nd",
-			"typeName": "shape"
-		},
-		{
-			"x": 682.7654009820476,
-			"y": 586.9401944107483,
-			"rotation": 0,
-			"isLocked": false,
-			"opacity": 1,
-			"meta": {},
-			"id": "shape:yrVgaN0O_xWZB7O4baXyu",
-			"type": "geo",
-			"props": {
-				"w": 544.1838264267287,
-				"h": 293.2356420467264,
-				"geo": "rectangle",
-				"color": "black",
-				"labelColor": "black",
-				"fill": "none",
-				"dash": "draw",
-				"size": "s",
-				"font": "draw",
-				"text": "",
-				"align": "middle",
-				"verticalAlign": "middle",
-				"growY": 0,
-				"url": "",
-				"scale": 1
-			},
-			"parentId": "page:page",
-			"index": "aA4P8",
-			"typeName": "shape"
-		},
-		{
-			"x": 841.7822713180001,
-			"y": 564.0417345696724,
-			"rotation": 0,
-			"isLocked": false,
-			"opacity": 1,
-			"meta": {},
-			"id": "shape:aEpKZXCMjakkoquX7wDzH",
-			"type": "text",
-			"props": {
-				"color": "black",
-				"size": "s",
-				"w": 91.4749984741211,
-				"text": "messages",
-				"font": "draw",
-				"textAlign": "start",
-				"autoSize": true,
-				"scale": 1
-			},
-			"parentId": "page:page",
-			"index": "aB4ug",
-			"typeName": "shape"
-		},
-		{
-			"x": 696.7478727360689,
-			"y": 584.2018497316233,
-			"rotation": 0,
-			"isLocked": false,
-			"opacity": 1,
-			"meta": {},
-			"id": "shape:wv-jHwnOU-LAQbtxXzUGV",
-			"type": "text",
-			"props": {
-				"color": "black",
-				"size": "s",
-				"w": 405.7875061035156,
-				"text": "  id \n  conversation_id \n  sender_id \n  message_text \n  attachment_url \n  created_at \n  FOREIGN KEY (conversation_id) \n  REFERENCES conversations(id) ON DELETE\n  CASCADE,\n  FOREIGN KEY (sender_id)\n  REFERENCES users(id) ON DELETE \n  CASCADE",
-				"font": "draw",
-				"textAlign": "start",
-				"autoSize": true,
-				"scale": 1
-			},
-			"parentId": "page:page",
-			"index": "aC8qZ",
-			"typeName": "shape"
-		},
-		{
-			"x": 372.420740303618,
-			"y": -440.18765431407496,
-			"rotation": 0,
-			"isLocked": false,
-			"opacity": 1,
-			"meta": {},
-			"id": "shape:mbZhATOxS5rfk8PIE8VEb",
-			"type": "geo",
-			"props": {
-				"w": 338,
-				"h": 158.23194618973628,
-				"geo": "rectangle",
-				"color": "black",
-				"labelColor": "black",
-				"fill": "none",
-				"dash": "draw",
-				"size": "s",
-				"font": "draw",
-				"text": "  id \n    message_id \n    user_id,\n    is_read \n    read_at \n    FOREIGN KEY (message_id) REFERENCES messages(id) ON DELETE CASCADE,\n    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE",
-				"align": "middle",
-				"verticalAlign": "middle",
-				"growY": 141.0680721208106,
-				"url": "",
-				"scale": 1
-			},
-			"parentId": "page:page",
-			"index": "aD7rc",
-			"typeName": "shape"
-		},
-		{
-			"x": 454.2400659835897,
-			"y": -466.2962384975225,
-			"rotation": 0,
-			"isLocked": false,
-			"opacity": 1,
-			"meta": {},
-			"id": "shape:SQHYTu1yonwQ5-tsTo9gL",
-			"type": "text",
-			"props": {
-				"color": "black",
-				"size": "s",
-				"w": 158.9499969482422,
-				"text": "message_status ",
-				"font": "draw",
-				"textAlign": "start",
-				"autoSize": true,
-				"scale": 1
-			},
-			"parentId": "page:page",
-			"index": "aE8PP",
-			"typeName": "shape"
-		},
-		{
-			"x": 209.12878942179145,
-			"y": 500.8172269322712,
-			"rotation": 0,
-			"isLocked": false,
-			"opacity": 1,
-			"meta": {},
-			"id": "shape:j5wzDhUl9-BgisohRmbhQ",
+			"id": "binding:ePi8WSotcHAzi9vLHU5aS",
 			"type": "arrow",
+			"fromId": "shape:iKLjzBxkUbjrwChneC_dX",
+			"toId": "shape:mbZhATOxS5rfk8PIE8VEb",
 			"props": {
-				"dash": "draw",
-				"size": "s",
-				"fill": "none",
-				"color": "black",
-				"labelColor": "black",
-				"bend": 0,
-				"start": {
-					"x": 11.851702858288036,
-					"y": -3.950555060881129
-				},
-				"end": {
-					"x": -254.8122896147945,
-					"y": 221.23236438125969
-				},
-				"arrowheadStart": "none",
-				"arrowheadEnd": "arrow",
-				"text": "",
-				"labelPosition": 0.5,
-				"font": "draw",
-				"scale": 1
-			},
-			"parentId": "page:page",
-			"index": "aFAA4",
-			"typeName": "shape"
-		},
-		{
-			"x": -165.03484118758502,
-			"y": 724.2387448625782,
-			"rotation": 0,
-			"isLocked": false,
-			"opacity": 1,
-			"meta": {},
-			"id": "shape:BhzIqlASJd-IlqJKtdBRZ",
-			"type": "note",
-			"props": {
-				"color": "black",
-				"size": "s",
-				"text": "This table stores user information for authentication and profile purposes.",
-				"font": "draw",
-				"align": "middle",
-				"verticalAlign": "middle",
-				"labelColor": "black",
-				"growY": 0,
-				"fontSizeAdjustment": 18,
-				"url": "",
-				"scale": 1
-			},
-			"parentId": "page:page",
-			"index": "aG6MI",
-			"typeName": "shape"
-		},
-		{
-			"x": 1100.5314026246533,
-			"y": -254.18976655791596,
-			"rotation": 0,
-			"isLocked": false,
-			"opacity": 1,
-			"meta": {},
-			"id": "shape:9SB69_vWZjvxKl1M9cxDc",
-			"type": "arrow",
-			"props": {
-				"dash": "draw",
-				"size": "s",
-				"fill": "none",
-				"color": "black",
-				"labelColor": "black",
-				"bend": 0,
-				"start": {
-					"x": 0,
-					"y": 0
-				},
-				"end": {
-					"x": 463.9470271280795,
-					"y": 43.26192725530018
-				},
-				"arrowheadStart": "none",
-				"arrowheadEnd": "arrow",
-				"text": "",
-				"labelPosition": 0.5,
-				"font": "draw",
-				"scale": 1
-			},
-			"parentId": "page:page",
-			"index": "aH2rW",
-			"typeName": "shape"
-		},
-		{
-			"x": 1568.9037851397031,
-			"y": -287.05918095200667,
-			"rotation": 0,
-			"isLocked": false,
-			"opacity": 1,
-			"meta": {},
-			"id": "shape:xND1bpqwg4L8UzUHgdfUG",
-			"type": "note",
-			"props": {
-				"color": "black",
-				"size": "s",
-				"text": "A table for tracking chat conversations (could be one-to-one or group chats).",
-				"font": "draw",
-				"align": "middle",
-				"verticalAlign": "middle",
-				"labelColor": "black",
-				"growY": 0,
-				"fontSizeAdjustment": 18,
-				"url": "",
-				"scale": 1
-			},
-			"parentId": "page:page",
-			"index": "aIBTG",
-			"typeName": "shape"
-		},
-		{
-			"x": 1489.8888901906114,
-			"y": 312.6907341142073,
-			"rotation": 0,
-			"isLocked": false,
-			"opacity": 1,
-			"meta": {},
-			"id": "shape:Q-4btPzdRQLcP2a0aYDcY",
-			"type": "arrow",
-			"props": {
-				"dash": "draw",
-				"size": "s",
-				"fill": "none",
-				"color": "black",
-				"labelColor": "black",
-				"bend": 0,
-				"start": {
-					"x": 0,
-					"y": 0
-				},
-				"end": {
-					"x": 164.09698703666731,
-					"y": 238.68652659878876
-				},
-				"arrowheadStart": "none",
-				"arrowheadEnd": "arrow",
-				"text": "",
-				"labelPosition": 0.5,
-				"font": "draw",
-				"scale": 1
-			},
-			"parentId": "page:page",
-			"index": "a7fNW",
-			"typeName": "shape"
-		},
-		{
-			"meta": {},
-			"id": "binding:gMisQNzv94_t8IW6Jinsn",
-			"type": "arrow",
-			"fromId": "shape:Q-4btPzdRQLcP2a0aYDcY",
-			"toId": "shape:RumfrKJeFJFlFQPU5GIpT",
-			"props": {
-				"isPrecise": false,
+				"isPrecise": true,
 				"isExact": false,
 				"normalizedAnchor": {
-					"x": 0.9739234698318969,
-					"y": 0.995361915868123
+					"x": 0.053672443311469836,
+					"y": 0.9968044606723314
 				},
 				"terminal": "start"
 			},
 			"typeName": "binding"
 		},
 		{
-			"x": 1656.9194645859272,
-			"y": 551.3272551076994,
+			"x": -1004.1235063091216,
+			"y": 75.92293560741348,
 			"rotation": 0,
 			"isLocked": false,
 			"opacity": 1,
 			"meta": {},
-			"id": "shape:qASr6HCvHAYgNwG9WUrB3",
+			"id": "shape:LKGLLl-oZA4s9FFgd0AT9",
+			"type": "draw",
+			"props": {
+				"segments": [
+					{
+						"type": "free",
+						"points": [
+							{
+								"x": 0,
+								"y": 0,
+								"z": 0.5
+							}
+						]
+					}
+				],
+				"color": "black",
+				"fill": "none",
+				"dash": "draw",
+				"size": "m",
+				"isComplete": true,
+				"isClosed": false,
+				"isPen": false,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "aO927",
+			"typeName": "shape"
+		},
+		{
+			"meta": {},
+			"id": "binding:qhoWNCxogtLkrCdeAaQAv",
+			"type": "arrow",
+			"fromId": "shape:iKLjzBxkUbjrwChneC_dX",
+			"toId": "shape:-tvcviEHJflajMRhUZQcb",
+			"props": {
+				"isPrecise": true,
+				"isExact": false,
+				"normalizedAnchor": {
+					"x": 0.8754086586184516,
+					"y": 0.02248867790920248
+				},
+				"terminal": "end"
+			},
+			"typeName": "binding"
+		},
+		{
+			"x": 1407.7905617888887,
+			"y": 998.8645493877307,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:m8MT0V2UkG8tmFuDWMM0U",
 			"type": "note",
 			"props": {
 				"color": "black",
 				"size": "s",
-				"text": "A pivot table to track users participating in conversations (for group chats).\n",
 				"font": "draw",
 				"align": "middle",
 				"verticalAlign": "middle",
@@ -677,10 +266,24 @@
 				"growY": 0,
 				"fontSizeAdjustment": 18,
 				"url": "",
-				"scale": 1
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "A table for storing chat messages."
+								}
+							]
+						}
+					]
+				}
 			},
 			"parentId": "page:page",
-			"index": "aJ8a7",
+			"index": "aK0iP",
 			"typeName": "shape"
 		},
 		{
@@ -719,35 +322,710 @@
 			"typeName": "shape"
 		},
 		{
+			"x": 1092.1780206383098,
+			"y": 54.550563340092594,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
 			"meta": {},
-			"id": "binding:TjNfyoJ2DTFgtF7ofUIuZ",
+			"id": "shape:OgU6BsYAHbNSu53lfEuuK",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "s",
+				"w": 393.4375,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "id "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "conversation_id"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "user_id "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "joined_at "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "FOREIGN KEY (conversation_id) "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "REFERENCES conversations(id) ON DELETE"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": " CASCADE,"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "FOREIGN KEY (user_id)"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": " REFERENCES users(id) ON DELETE"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": " CASCADE"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a98Nd",
+			"typeName": "shape"
+		},
+		{
+			"editingShapeId": null,
+			"croppingShapeId": null,
+			"selectedShapeIds": [],
+			"hoveredShapeId": null,
+			"erasingShapeIds": [],
+			"hintingShapeIds": [],
+			"focusedGroupId": null,
+			"meta": {},
+			"id": "instance_page_state:page:page",
+			"pageId": "page:page",
+			"typeName": "instance_page_state"
+		},
+		{
+			"meta": {},
+			"id": "binding:gMisQNzv94_t8IW6Jinsn",
 			"type": "arrow",
-			"fromId": "shape:pvAFPKC91NLOE7HSlCtmk",
-			"toId": "shape:yrVgaN0O_xWZB7O4baXyu",
+			"fromId": "shape:Q-4btPzdRQLcP2a0aYDcY",
+			"toId": "shape:RumfrKJeFJFlFQPU5GIpT",
 			"props": {
 				"isPrecise": false,
 				"isExact": false,
 				"normalizedAnchor": {
-					"x": 0.9952237764907013,
-					"y": 0.9979381712709815
+					"x": 0.9739234698318969,
+					"y": 0.995361915868123
 				},
 				"terminal": "start"
 			},
 			"typeName": "binding"
 		},
 		{
-			"x": 1407.7905617888887,
-			"y": 998.8645493877307,
+			"x": 372.420740303618,
+			"y": -440.18765431407496,
 			"rotation": 0,
 			"isLocked": false,
 			"opacity": 1,
 			"meta": {},
-			"id": "shape:m8MT0V2UkG8tmFuDWMM0U",
+			"id": "shape:mbZhATOxS5rfk8PIE8VEb",
+			"type": "geo",
+			"props": {
+				"w": 338,
+				"h": 158.23194618973628,
+				"geo": "rectangle",
+				"color": "black",
+				"labelColor": "black",
+				"fill": "none",
+				"dash": "draw",
+				"size": "s",
+				"font": "draw",
+				"align": "middle",
+				"verticalAlign": "middle",
+				"growY": 141.0680721208106,
+				"url": "",
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "  id "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "    message_id "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "    user_id,"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "    is_read "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "    read_at "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "    FOREIGN KEY (message_id) REFERENCES messages(id) ON DELETE CASCADE,"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "aD7rc",
+			"typeName": "shape"
+		},
+		{
+			"x": 1199.2121836511496,
+			"y": 4.938438308809964,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:3x2wfy1WoM5Mi2L2vzloV",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "s",
+				"w": 181.0625,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "conversation_users"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a88rA",
+			"typeName": "shape"
+		},
+		{
+			"x": 807.5866065790067,
+			"y": -252.628633044834,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:BbzVrzx4HcINDMdWs3ihC",
+			"type": "geo",
+			"props": {
+				"w": 299.01025285527703,
+				"h": 167.1108004867567,
+				"geo": "rectangle",
+				"color": "black",
+				"labelColor": "black",
+				"fill": "none",
+				"dash": "draw",
+				"size": "m",
+				"font": "draw",
+				"align": "middle",
+				"verticalAlign": "middle",
+				"growY": 0,
+				"url": "",
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph"
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a42Ew",
+			"typeName": "shape"
+		},
+		{
+			"x": 874.8359531099285,
+			"y": -285.3029790691155,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:c_vSXjk0qWchygs82bqd9",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 171.0749969482422,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "conversations"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a5AAJ",
+			"typeName": "shape"
+		},
+		{
+			"x": 822.4446508496569,
+			"y": -236.47484026106736,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:GEiC_ahF7O9z7iXxwnwFr",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "s",
+				"w": 193.9875030517578,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "id "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "conversation_name ,"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "is_group "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "created_at "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "updated_at AMP"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a68qy",
+			"typeName": "shape"
+		},
+		{
+			"x": 1100.5314026246533,
+			"y": -254.18976655791596,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:9SB69_vWZjvxKl1M9cxDc",
+			"type": "arrow",
+			"props": {
+				"dash": "draw",
+				"size": "s",
+				"fill": "none",
+				"color": "black",
+				"labelColor": "black",
+				"bend": 0,
+				"start": {
+					"x": 0,
+					"y": 0
+				},
+				"end": {
+					"x": 463.9470271280795,
+					"y": 43.26192725530018
+				},
+				"arrowheadStart": "none",
+				"arrowheadEnd": "arrow",
+				"text": "",
+				"labelPosition": 0.5,
+				"font": "draw",
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "aH2rW",
+			"typeName": "shape"
+		},
+		{
+			"x": 682.7654009820476,
+			"y": 586.9401944107483,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:yrVgaN0O_xWZB7O4baXyu",
+			"type": "geo",
+			"props": {
+				"w": 544.1838264267287,
+				"h": 293.2356420467264,
+				"geo": "rectangle",
+				"color": "black",
+				"labelColor": "black",
+				"fill": "none",
+				"dash": "draw",
+				"size": "s",
+				"font": "draw",
+				"align": "middle",
+				"verticalAlign": "middle",
+				"growY": 0,
+				"url": "",
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph"
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "aA4P8",
+			"typeName": "shape"
+		},
+		{
+			"x": 300.00006103515625,
+			"y": 187.0000114440918,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:NXyGnx8L5zIxrG9_txwuR",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 66.88750457763672,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "users"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a2BgP",
+			"typeName": "shape"
+		},
+		{
+			"x": 1489.8888901906114,
+			"y": 312.6907341142073,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:Q-4btPzdRQLcP2a0aYDcY",
+			"type": "arrow",
+			"props": {
+				"dash": "draw",
+				"size": "s",
+				"fill": "none",
+				"color": "black",
+				"labelColor": "black",
+				"bend": 0,
+				"start": {
+					"x": 0,
+					"y": 0
+				},
+				"end": {
+					"x": 164.09698703666731,
+					"y": 238.68652659878876
+				},
+				"arrowheadStart": "none",
+				"arrowheadEnd": "arrow",
+				"text": "",
+				"labelPosition": 0.5,
+				"font": "draw",
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a7fNW",
+			"typeName": "shape"
+		},
+		{
+			"x": 209.12878942179145,
+			"y": 500.8172269322712,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:j5wzDhUl9-BgisohRmbhQ",
+			"type": "arrow",
+			"props": {
+				"dash": "draw",
+				"size": "s",
+				"fill": "none",
+				"color": "black",
+				"labelColor": "black",
+				"bend": 0,
+				"start": {
+					"x": 11.851702858288036,
+					"y": -3.950555060881129
+				},
+				"end": {
+					"x": -254.8122896147945,
+					"y": 221.23236438125969
+				},
+				"arrowheadStart": "none",
+				"arrowheadEnd": "arrow",
+				"text": "",
+				"labelPosition": 0.5,
+				"font": "draw",
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "aFAA4",
+			"typeName": "shape"
+		},
+		{
+			"x": 248.79995727539062,
+			"y": 248.5999870300293,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:iEo78_C3M2bEonx89CVdg",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 151.53750610351562,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "id,"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "name,"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "email "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": ",password,"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "avatar_url ,"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "created_at "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "updated_at"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a3Adz",
+			"typeName": "shape"
+		},
+		{
+			"x": 1656.9194645859272,
+			"y": 551.3272551076994,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:qASr6HCvHAYgNwG9WUrB3",
 			"type": "note",
 			"props": {
 				"color": "black",
 				"size": "s",
-				"text": "A table for storing chat messages.",
 				"font": "draw",
 				"align": "middle",
 				"verticalAlign": "middle",
@@ -755,10 +1033,198 @@
 				"growY": 0,
 				"fontSizeAdjustment": 18,
 				"url": "",
-				"scale": 1
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "A pivot table to track users participating in conversations (for group chats)."
+								}
+							]
+						},
+						{
+							"type": "paragraph"
+						}
+					]
+				}
 			},
 			"parentId": "page:page",
-			"index": "aK0iP",
+			"index": "aJ8a7",
+			"typeName": "shape"
+		},
+		{
+			"x": 841.7822713180001,
+			"y": 564.0417345696724,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:aEpKZXCMjakkoquX7wDzH",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "s",
+				"w": 91.4749984741211,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "messages"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "aB4ug",
+			"typeName": "shape"
+		},
+		{
+			"x": 1080.0730422796728,
+			"y": 31.00290375430791,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:RumfrKJeFJFlFQPU5GIpT",
+			"type": "geo",
+			"props": {
+				"w": 420.7885533158724,
+				"h": 283.00041007116516,
+				"geo": "rectangle",
+				"color": "black",
+				"labelColor": "black",
+				"fill": "none",
+				"dash": "draw",
+				"size": "s",
+				"font": "draw",
+				"align": "middle",
+				"verticalAlign": "middle",
+				"growY": 0,
+				"url": "",
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph"
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a73KJ",
+			"typeName": "shape"
+		},
+		{
+			"meta": {},
+			"id": "page:page",
+			"name": "Page 1",
+			"index": "a1",
+			"typeName": "page"
+		},
+		{
+			"gridSize": 10,
+			"name": "",
+			"meta": {},
+			"id": "document:document",
+			"typeName": "document"
+		},
+		{
+			"followingUserId": null,
+			"opacityForNextShape": 1,
+			"stylesForNextShape": {},
+			"brush": null,
+			"scribbles": [],
+			"cursor": {
+				"type": "default",
+				"rotation": 0
+			},
+			"isFocusMode": false,
+			"exportBackground": true,
+			"isDebugMode": false,
+			"isToolLocked": false,
+			"screenBounds": {
+				"x": 0,
+				"y": 0,
+				"w": 1077.818115234375,
+				"h": 828.2181396484375
+			},
+			"insets": [
+				false,
+				false,
+				true,
+				false
+			],
+			"zoomBrush": null,
+			"isGridMode": false,
+			"isPenMode": false,
+			"chatMessage": "",
+			"isChatting": false,
+			"highlightedUserIds": [],
+			"isFocused": true,
+			"devicePixelRatio": 1.1458333730697632,
+			"isCoarsePointer": false,
+			"isHoveringCanvas": true,
+			"openMenus": [],
+			"isChangingStyle": false,
+			"isReadonly": false,
+			"meta": {},
+			"duplicateProps": null,
+			"id": "instance:instance",
+			"currentPageId": "page:page",
+			"typeName": "instance"
+		},
+		{
+			"x": 1568.9037851397031,
+			"y": -287.05918095200667,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:xND1bpqwg4L8UzUHgdfUG",
+			"type": "note",
+			"props": {
+				"color": "black",
+				"size": "s",
+				"font": "draw",
+				"align": "middle",
+				"verticalAlign": "middle",
+				"labelColor": "black",
+				"growY": 0,
+				"fontSizeAdjustment": 18,
+				"url": "",
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "A table for tracking chat conversations (could be one-to-one or group chats)."
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "aIBTG",
 			"typeName": "shape"
 		},
 		{
@@ -797,6 +1263,141 @@
 			"typeName": "shape"
 		},
 		{
+			"x": 696.7478727360689,
+			"y": 584.2018497316233,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:wv-jHwnOU-LAQbtxXzUGV",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "s",
+				"w": 405.7875061035156,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "  id "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "  conversation_id "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "  sender_id "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "  message_text "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "  attachment_url "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "  created_at "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "  FOREIGN KEY (conversation_id) "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "  REFERENCES conversations(id) ON DELETE"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "  CASCADE,"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "  FOREIGN KEY (sender_id)"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "  REFERENCES users(id) ON DELETE "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "  CASCADE"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "aC8qZ",
+			"typeName": "shape"
+		},
+		{
 			"x": 47.999878746709555,
 			"y": -123.18265612360358,
 			"rotation": 0,
@@ -808,7 +1409,6 @@
 			"props": {
 				"color": "black",
 				"size": "s",
-				"text": "If you want to track whether messages are read or delivered.h",
 				"font": "draw",
 				"align": "middle",
 				"verticalAlign": "middle",
@@ -816,45 +1416,25 @@
 				"growY": 0,
 				"fontSizeAdjustment": 18,
 				"url": "",
-				"scale": 1
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "If you want to track whether messages are read or delivered.h"
+								}
+							]
+						}
+					]
+				}
 			},
 			"parentId": "page:page",
 			"index": "aM1to",
 			"typeName": "shape"
-		},
-		{
-			"meta": {},
-			"id": "binding:ePi8WSotcHAzi9vLHU5aS",
-			"type": "arrow",
-			"fromId": "shape:iKLjzBxkUbjrwChneC_dX",
-			"toId": "shape:mbZhATOxS5rfk8PIE8VEb",
-			"props": {
-				"isPrecise": true,
-				"isExact": false,
-				"normalizedAnchor": {
-					"x": 0.053672443311469836,
-					"y": 0.9968044606723314
-				},
-				"terminal": "start"
-			},
-			"typeName": "binding"
-		},
-		{
-			"meta": {},
-			"id": "binding:qhoWNCxogtLkrCdeAaQAv",
-			"type": "arrow",
-			"fromId": "shape:iKLjzBxkUbjrwChneC_dX",
-			"toId": "shape:-tvcviEHJflajMRhUZQcb",
-			"props": {
-				"isPrecise": true,
-				"isExact": false,
-				"normalizedAnchor": {
-					"x": 0.8754086586184516,
-					"y": 0.02248867790920248
-				},
-				"terminal": "end"
-			},
-			"typeName": "binding"
 		}
 	]
 }

@@ -19,7 +19,7 @@ const Alert = ({ type, content, onCancel }) => {
       transition={{
         ease: [0.215, 0.61, 0.355, 1],
       }}
-      className="fixed flex flex-col gap-1 w-72  right-10 top-10"
+      className="fixed mb-5 flex flex-col gap-1 w-72  right-10 top-10"
     >
       <div
         className={`p-2 flex items-start rounded gap-2 text-xs font-medium shadow-lg text-white  `}
