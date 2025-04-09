@@ -25,7 +25,7 @@ const Register = () => {
     setIsLoading(true);
     e.preventDefault();
     if (!email || !password || !name || !confirmPassword) {
-      setAllfieldAreRequired("fields are required!");
+      setError(["Fields are required!"]);
       setIsLoading(false);
       setTimeout(() => {
         setAllfieldAreRequired(false);
@@ -81,18 +81,19 @@ const Register = () => {
   return (
     <div>
       <div className="w-full h-[100vh] flex flex-col items-center justify-center">
+        
+
         {error && (
           <div className="flex flex-col gap-1">
             {error.map((item, index) => (
-              <div key={index}>
+              <div key={index} className="">
                 <Alert type={"error"} content={item} />
                 
               </div>
             ))}
           </div>
         )}
-        {/* {allfieldareRequired && (
-        )} */}
+       
         {succesAlert && <Alert type={"success"} content={succesAlert} />}
         <form
           className="bg-white rounded-lg p-8 shadow-lg w-full px-10 sm:w-[80%] md:w-[70%] lg:w-1/3 "
@@ -177,7 +178,7 @@ const Register = () => {
             whileTap={{
               scale: 0.95,
             }}
-            className="relative hover:text-[#4F46E5] overflow-hidden hover:bg-[#EEF2FF] w-full mt-3 border  border-black py-2 rounded-full"
+            className="relative text-white rounded bg-black overflow-hidden  w-full mt-3 border  border-black py-3 "
           >
             Register
           </motion.button>
@@ -190,76 +191,11 @@ const Register = () => {
         </form>
       </div>
 
-      <div className="w-full h-[100vh] flex flex-col items-center justify-center">
-        {error && <Alert type={"error"} content={error} />}
-        <form
-          className=" w-full px-10 sm:w-[80%] md:w-[70%] lg:w-1/3 "
-          onSubmit={handleSubmit}
-        >
-          <h1 className="text-3xl text-center font-semibold">Welcome Sir !</h1>
-          <p className="text-sm text-slate-500 text-center  mb-5">
-            Please The required details
-          </p>
-          <div className="flex flex-col">
-            <label htmlFor="name">Name</label>
-            <input
-              type="text"
-              className="outline-none   border-b-2"
-              onChange={(e) => setName(e.target.value)}
-            />
-          </div>
-          <div className="flex flex-col mt-1">
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              className="outline-none   border-b-2"
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-          <div className="flex flex-col mt-1 relative">
-            <label htmlFor="password">Password</label>
-            <input
-              type={showPassword ? "text" : "password"}
-              className="outline-none   border-b-2"
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            {showPassword ? (
-              <LiaEyeSolid
-                onClick={HandlePassword}
-                className="absolute right-0  top-1/2 cursor-pointer"
-              />
-            ) : (
-              <FaRegEyeSlash
-                onClick={HandlePassword}
-                className="absolute right-0  top-1/2 cursor-pointer"
-              />
-            )}
-          </div>
-          <div className="flex flex-col mt-1 relative">
-            <label htmlFor="password">Confirm Password</label>
-            <input
-              type={showPassword ? "text" : "password"}
-              className="outline-none   border-b-2"
-              onChange={(e) => setConfirmPassword(e.target.value)}
-            />
-          </div>
-          <motion.button
-            whileTap={{
-              scale: 0.95,
-            }}
-            className="relative hover:text-[#4F46E5] overflow-hidden hover:bg-[#EEF2FF] w-full mt-3 border  border-black py-2 rounded-full"
-          >
-            Register
-          </motion.button>
-          <p className="flex justify-center text-sm mt-4 text-slate-500">
-            Already have an account?
-            <Link to="/login" className="text-black">
-              Register
-            </Link>
-          </p>
-        </form>
-      </div>
+     
     </div>
   );
 };
 export default Register;
+
+
+

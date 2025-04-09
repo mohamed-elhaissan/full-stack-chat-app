@@ -3,9 +3,12 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import Alert from "./required-componants/Alert.jsx";
 import axiosInstance from "./required-componants/axios-Instance.jsx";
+import { useContext } from "react";
+import { LoaderCtx } from "../context/LoaderProvider.jsx";
 const Login = () => {
   //state to mange data
   const [email, setEmail] = useState("");
+  const { setIsLoading } = useContext(LoaderCtx);
   const [password, setPassword] = useState("");
   const [notfication, setNotfication] = useState(false);
   const navigate = useNavigate();
@@ -19,6 +22,7 @@ const Login = () => {
         setNotfication(false);
       }, 1500);
     } else {
+      setIsLoading(true);
       axiosInstance
         .post("login", {
           email: email,
@@ -42,7 +46,9 @@ const Login = () => {
           setTimeout(() => {
             setNotfication(false);
           }, 1500);
-        });
+        }).finally(() => {
+          setIsLoading(false);
+        })
     }
   };
 
@@ -56,7 +62,7 @@ const Login = () => {
         />
       )}
       <form
-        className="w-full px-10 sm:w-[80%] md:w-[70%] lg:w-1/3"
+        className="w-full px-10 sm:w-[80%] md:w-[70%] lg:w-1/3 bg-white p-8 rounded"
         onSubmit={handleSubmit}
       >
         <h1 className="text-3xl text-center font-semibold">Welcome Back !</h1>
@@ -93,7 +99,7 @@ const Login = () => {
             duration: 0.1,
             ease: "easeIn",
           }}
-          className="relative hover:text-[#4F46E5]  overflow-hidden hover:bg-[#EEF2FF] w-full mt-3 border  border-black py-2 rounded-full"
+          className="relative  overflow-hidden  w-full mt-3 border  border-black py-3 bg-black text-white rounded"
         >
           Login
         </motion.button>
