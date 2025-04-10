@@ -41,7 +41,7 @@ class userSeeder extends Seeder
         foreach ($users as $user) {
            DB::table('users')->insert([
                 'name' => $user,
-                'email' => strtolower(str_replace(' ', '_', $user)) . '@example.com',
+                'email' => strtolower(str_replace(' ', '_', $user)) . '@gmail.com',
                 'password' => Hash::make('123456789'), // Use a secure password hashing method
                 'isOnline' => false,
                 'created_at' => now(),

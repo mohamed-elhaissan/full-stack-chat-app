@@ -1,17 +1,15 @@
-
+import { Outlet } from "react-router";
 import LeftSide from "./leftSide";
-import MiddleSide from "./middleSide";
-import RightSide from "./rightSide";
 
-const Dashboard = ()=>{
-    return(
-        <div className="flex">
-            <LeftSide/>
-            <MiddleSide/>
-            <RightSide/>
-        </div>
-    )
+const Dashboard = () => {
+  return (
+    <div className="grid grid-cols-2 gap-4 overflow-hidden w-screen h-screen bg-[#F8FAFC]">
+      
+        <LeftSide />
 
-
-}
+        <Outlet />
+  
+    </div>
+  );
+};
 export default Dashboard;
