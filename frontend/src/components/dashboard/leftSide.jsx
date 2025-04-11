@@ -1,13 +1,31 @@
 import { CiSearch } from "react-icons/ci";
 import axiosInstance from "../required-componants/axios-Instance.jsx";
-
+import images_1 from "../../assets/../../public/usersProfiles/1.svg";
+import images_2 from "../../assets/../../public/usersProfiles/2.svg";
+import images_3 from "../../assets/../../public/usersProfiles/3.svg";
+import images_4 from "../../assets/../../public/usersProfiles/4.svg";
+import images_5 from "../../assets/../../public/usersProfiles/5.svg";
+import images_6 from "../../assets/../../public/usersProfiles/7.svg";
+import images_7 from "../../assets/../../public/usersProfiles/9.svg";
+import images_8 from "../../assets/../../public/usersProfiles/11 (1).svg";
+import images_9 from "../../assets/../../public/usersProfiles/12.svg";
 import { motion } from "framer-motion";
 
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router";
 const LeftSide = () => {
   const [user, setUser] = useState([]);
-  
+  const images = [
+    images_1,
+    images_2,
+    images_3,
+    images_4,
+    images_5,
+    images_6,
+    images_7,
+    images_8,
+    images_9,
+  ];
 
   // function to fetch all users
   // this function will be used to fetch all users from the server
@@ -65,14 +83,11 @@ const LeftSide = () => {
                 className=" hover:scale-105 hover:bg-[#F8FAFC] shadow-sm hover:shadow-custom-shadow duration-200"
               >
                 <div className="flex items-center cursor-pointer  gap-2 w-full mx-4 my-1 py-2">
-                  <div className="bg-[#B2B2B2] relative w-14   h-14 rounded-full flex items-center justify-center">
-                    <h2 className="text-2xl text-white">
-                      {item.name.split("")[0]}
-                    </h2>
-                    <h2 className="text-2xl text-white">
-                      {item.name.split(" ")[1][0].toLowerCase()}
-                    </h2>
-                  </div>
+                  <img
+                    src={images[Math.floor(Math.random() * 8) + 1]}
+                    className="w-10 h-10 rounded-full"
+                    alt=""
+                  />
                   <div>
                     <p className="text-lg text-[#1E293B]">
                       {item.name.toLowerCase()}
