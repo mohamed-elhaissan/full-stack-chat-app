@@ -1,24 +1,28 @@
-import { AnimatePresence, motion } from "framer-motion";
+import {motion } from "framer-motion";
 const Loader = () => {
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0, y: '-100%' }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: '-100%' }}
-        transition={{
-          ease: "easeInOut",
-        }}
-        className="fixed flex justify-center items-center bg-[#dedde2] z-50 left-0 top-0 w-full h-full"
-      >
-        <div className="flex gap-1">
-          <span className="relative">
-            <div className="absolute bg-blue-400 rounded-full w-10 h-10  animate-ping"></div>
-            <div className="absolute  bg-indigo-500 animate-ping rounded-full w-10 h-10 size-1"></div>
-          </span>
-        </div>
-      </motion.div>
-    </AnimatePresence>
+    <motion.div className="fixed flex justify-center items-center bg-[#dedde2] z-50 left-0 top-0 w-full h-full">
+      <div className="flex gap-1 animate-spin">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="56"
+          height="56"
+          viewBox="0 0 56 56"
+          fill="none"
+        >
+          <path
+            d="M36.639 5.60901C39.5795 6.74346 42.2677 8.44598 44.5502 10.6193C46.8327 12.7927 48.6648 15.3944 49.9419 18.2758C51.2189 21.1572 51.9159 24.2619 51.9931 27.4127C52.0703 30.5635 51.5261 33.6986 50.3916 36.6391C49.2572 39.5796 47.5547 42.2678 45.3813 44.5503C43.2079 46.8328 40.6063 48.6649 37.7249 49.9419C34.8435 51.219 31.7387 51.916 28.5879 51.9932C25.4372 52.0703 22.302 51.5262 19.3616 50.3917C16.4211 49.2573 13.7329 47.5547 11.4503 45.3814C9.16784 43.208 7.33576 40.6063 6.05871 37.7249C4.78166 34.8435 4.08465 31.7388 4.00748 28.588C3.93031 25.4372 4.47448 22.3021 5.60894 19.3616C6.74339 16.4212 8.4459 13.7329 10.6193 11.4504C12.7926 9.16792 15.3943 7.33584 18.2757 6.05879C21.1571 4.78174 24.2618 4.08473 27.4126 4.00756C30.5634 3.93038 33.6985 4.47456 36.639 5.60901L36.639 5.60901Z"
+            stroke="#D9D9D9"
+            stroke-width="4"
+          />
+          <path
+            d="M36.639 5.60901C39.5795 6.74346 42.2677 8.44598 44.5502 10.6193C46.8327 12.7927 48.6648 15.3944 49.9419 18.2758C51.2189 21.1572 51.9159 24.2619 51.9931 27.4127C52.0703 30.5635 51.5261 33.6986 50.3916 36.6391C49.2572 39.5796 47.5547 42.2678 45.3813 44.5503C43.2079 46.8328 40.6063 48.6649 37.7249 49.9419C34.8435 51.219 31.7387 51.916 28.5879 51.9932C25.4372 52.0703 22.302 51.5262 19.3616 50.3917"
+            stroke="#2D2D2D"
+            stroke-width="4"
+          />
+        </svg>
+      </div>
+    </motion.div>
   );
 };
 

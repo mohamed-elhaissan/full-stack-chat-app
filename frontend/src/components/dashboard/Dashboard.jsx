@@ -3,12 +3,10 @@ import LeftSide from "./leftSide";
 
 const Dashboard = () => {
   return (
-    <div className="grid grid-cols-5 gap-4 overflow-hidden w-full h-screen bg-[#F8FAFC]">
-      
-        <LeftSide />
+    <div className="grid grid-cols-5 overflow-hidden w-full h-screen bg-[#F8FAFC]">
+      <LeftSide />
 
-        <Outlet />
-  
+      <Outlet />
     </div>
   );
 };

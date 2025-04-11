@@ -1,9 +1,12 @@
 /* eslint-disable react/prop-types */
-const MiddleSide = ({userId}) => {
-    return (
-        <div className="bg-[#F8FAFC] w-[60%]">
-            {userId ? <div className="text-2xl text-center">Chat with {userId}</div> : <div className="text-2xl text-center">Select a user to chat</div>}
-        </div>
-    )
+import ChatHeader from "./ChatHeader";
+import ChatBody from "./ChatBody";
+const MiddleSide = ({ userId }) => {
+  return (
+    <div className="bg-[#F8FAFC] border  w-[58%] flex flex-col h-screen">
+      <ChatHeader userId={userId} />
+      <ChatBody userId={userId} />
+    </div>
+  );
 };
 export default MiddleSide;

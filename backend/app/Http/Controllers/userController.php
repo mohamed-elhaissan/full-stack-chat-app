@@ -17,6 +17,21 @@ class userController extends Controller
             'data' => User::all()
         ]);
     }
+    public function getFriendUser($id)
+    {
+
+        $friendData = User::find($id);
+        if (!$friendData) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'User not found'
+            ], 404);
+        }
+        return response()->json([
+            'status' => 'success',
+            'data' => $friendData
+        ]);
+    }
 
     /**
      * Show the form for creating a new resource.

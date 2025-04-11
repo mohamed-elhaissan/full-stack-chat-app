@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware(('auth:sanctum'))->group(function(){
     Route::get('/users',[userController::class,'index']);
+    Route::get('/users/{id}',[userController::class,'getFriendUser']);
 });
 Route::post('/register',[AuthController::class,'Register']);
 Route::post('/login',[AuthController::class,'Login']);
