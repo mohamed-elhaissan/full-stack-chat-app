@@ -6,7 +6,7 @@ const ChatLayout = () => {
     const {userID} = useParams()
   return (
     <div>
-        <div className="flex flex-1 overflow-hidden w-screen h-screen">
+        <div className="flex col-span-4  bg-red-50 overflow-hidden w-screen h-screen">
             <MiddleSide userId={userID} />
             <RightSide userId={userID}/>
         </div>

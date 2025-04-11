@@ -9,6 +9,7 @@ import images_6 from "../../assets/../../public/usersProfiles/7.svg";
 import images_7 from "../../assets/../../public/usersProfiles/9.svg";
 import images_8 from "../../assets/../../public/usersProfiles/11 (1).svg";
 import images_9 from "../../assets/../../public/usersProfiles/12.svg";
+import { motion } from "framer-motion";
 
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router";
@@ -47,7 +48,7 @@ const LeftSide = () => {
   }, []);
 
   return (
-    <div className=" w-1/3 bg-white  col-span-1 py-4 shadow-lg flex sticky flex-col items-center gap-5 rounded-lg  ">
+    <div className=" bg-white py-4 shadow-lg flex sticky flex-col items-center gap-5 rounded-lg  ">
       <div className="w-full  px-4">
         <h2 className="text-4xl font-bold mb-5 flex items-center  gap-5">
           Messages{" "}
@@ -69,8 +70,16 @@ const LeftSide = () => {
         <div className="w-full mr-5   flex flex-col overflow-y-scroll overflow-x-hidden flex-1 h-screen">
           {user.map((item) => (
             <NavLink to={`/dashboard/${item.id}`} key={item.id}>
-              <div
-                
+              <motion.div
+                initial={{ y: -10, scale: 0.9, opacity: 0 }}
+                animate={{ y: 0, scale: 1, opacity: 1 }}
+                transition={{
+                  delay: 0.1 * item.id,
+                  type: "spring",
+                  stiffness: 200,
+                  damping: 15,
+                  duration: 0.1,
+                }}
                 className=" hover:scale-105 hover:bg-[#F8FAFC] shadow-sm hover:shadow-custom-shadow duration-200"
               >
                 <div className="flex items-center cursor-pointer  gap-2 w-full mx-4 my-1 py-2">
@@ -86,7 +95,7 @@ const LeftSide = () => {
                   </div>
                 </div>
                 <hr />
-              </div>
+              </motion.div>
             </NavLink>
           ))}
         </div>

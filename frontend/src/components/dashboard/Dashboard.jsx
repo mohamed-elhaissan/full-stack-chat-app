@@ -3,7 +3,7 @@ import LeftSide from "./leftSide";
 
 const Dashboard = () => {
   return (
-    <div className="grid grid-cols-2 gap-4 overflow-hidden w-screen h-screen bg-[#F8FAFC]">
+    <div className="grid grid-cols-5 gap-4 overflow-hidden w-full h-screen bg-[#F8FAFC]">
       
         <LeftSide />
 
