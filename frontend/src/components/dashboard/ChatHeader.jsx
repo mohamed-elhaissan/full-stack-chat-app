@@ -26,7 +26,7 @@ const ChatHeader = ({ userId }) => {
   return (
     <div>
       {userData && (
-        <div className="p-6 flex items-center justify-between  gap-2 bg-white shadow-sm">
+        <div className="p-6 flex items-center justify-between w-screen  gap-2 bg-white shadow-sm">
           <div className="flex items-center gap-3">
             <div className="bg-[#B2B2B2] relative w-16   h-16 rounded-full flex items-center justify-center">
               <h2 className="text-3xl text-white">

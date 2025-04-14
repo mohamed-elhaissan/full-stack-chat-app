@@ -48,7 +48,7 @@ const LeftSide = () => {
   }, []);
 
   return (
-    <div className=" bg-white py-4 shadow-lg flex sticky flex-col items-center gap-5 rounded-lg  ">
+    <div className=" bg-white py-4 shadow-lg flex  sticky flex-col items-center gap-5 rounded-lg  ">
       <div className="w-full  px-4">
         <h2 className="text-4xl font-bold mb-5 flex items-center  gap-5">
           Messages{" "}

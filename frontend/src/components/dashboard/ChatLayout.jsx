@@ -1,17 +1,15 @@
-import { useParams } from "react-router"
-import MiddleSide from "./middleSide"
-import RightSide from "./rightSide"
+import { useParams } from "react-router";
+import MiddleSide from "./middleSide";
 
 const ChatLayout = () => {
-    const {userID} = useParams()
+  const { userID } = useParams();
   return (
     <div>
-        <div className="flex col-span-4  bg-red-50 overflow-hidden w-screen h-screen">
-            <MiddleSide userId={userID} />
-            <RightSide userId={userID}/>
-        </div>
+      <div className="flex   overflow-hidden  h-screen">
+        <MiddleSide userId={userID} />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default ChatLayout
+export default ChatLayout;
